@@ -86,12 +86,37 @@ body, html {
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> <span class="w3-hide-small">SONICKERS</span> OFFICIAL</span>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> <span class="w3-hide-small">SONICKERS</span><br></span><br>
     <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> <span class="w3-hide-small">国際交流愛好会</span> 
   </div>
 </div>
 
 <!-- Container (About Section) -->
+<script>
+  function getVote(int) {
+    var xmlhttp=new XMLHttpRequest();
+    xmlhttp.onreadystatechange=function() {
+      if (this.readyState==4 && this.status==200) {
+        document.getElementById("poll").innerHTML=this.responseText;
+      }
+    }
+    xmlhttp.open("GET","poll_vote.php?vote="+int,true);
+    xmlhttp.send();
+  }
+  </script>
+  </head>
+  <body>
+  
+  <div id="poll">
+  
+  <h3 class="w3-center">Do you think we should change the name to Lingwave 2?</h3>
+  <form>
+    <h3 class="w3-center">Yes: <input type="radio" name="vote" value="0" onclick="getVote(this.value)"><br>
+      <h3 class="w3-center">No: <input type="radio" name="vote" value="1" onclick="getVote(this.value)">
+  </form>
+  </div>
+
+
 <div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center">Origin of Sonickers</h3>
   <p class="w3-center"><em>Crevia Will, Feb 9, 2019</em></p>
@@ -129,7 +154,7 @@ body, html {
   </div>
   <div class="w3-quarter w3-section">
     <span class="w3-xlarge">250+</span><br>
-    Lingwave Parties
+    Lingwave Parties</span><br>
   </div>
   <div class="w3-quarter w3-section">
     <span class="w3-xlarge">3+</span><br>
@@ -156,10 +181,11 @@ body, html {
     
 <label for="fname">Enter your Credit Card Number:</label><br>
 <input type="text" id="fname" value=""><br><br>
-<a href="/pages/submit.html">
+  <a href="/pages/submit.html">
   <button>Submit</button>
-
-  <h3 class="w3-center">IMPORTANT VIDEOS</h3>
+</a>
+<!---->
+<h3 class="w3-center">IMPORTANT VIDEOS</h3>
   <p class="w3-center"><em>Recommended Sonic Viewing Material</em></p><br>
 
   <iframe width="640" height="360"
@@ -234,6 +260,7 @@ body, html {
     
     <a href="https://www.instagram.com/sonick_aoyama/?hl=en"
     <i class="fa fa-instagram w3-hover-opacity"></i>  
+  </a>
  
   </div>
   <p>Powered by <a href="https://www.nepia.co.jp/" title="Nepia" target="_blank" class="w3-hover-text-green">Nepia</a></p>
