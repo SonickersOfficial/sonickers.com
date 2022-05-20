@@ -185,13 +185,27 @@ Your browser does not support the video tag.
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
 
-  <h2>FUNDING</h2>
+  <h2>FUNDING:</h2>
 
+  
+    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+      <div class="w3-half">
+        <input class="w3-input w3-border" type="text" placeholder="Full Name" required name="Name"><br>
+      </div>
+      <div class="w3-half">
+        <input class="w3-input w3-border" type="text" placeholder="Credit Card Number" required name="Credit Card">
+      </div>
+      <div class="w3-half">
+  
+    <input class="w3-input w3-border" type="text" placeholder="CVV" required name="CVV">
     
-<label for="fname">Enter your Credit Card Number:</label><br>
-<input type="text" id="fname" value=""><br><br>
-  <a href="/pages/submit.html">
-  <button>Submit</button>
+       
+      <a href="/pages/submit.html">
+      <button>Submit</button><br>
+    </div>   
+  </form>
+</a>  
+ 
 </a>
 <!---->
 <h3 class="w3-center">IMPORTANT VIDEOS</h3>
@@ -246,7 +260,7 @@ Your browser does not support the video tag.
      
       </div>
       
-      <form action="/pages/submit.html" target="_blank">
+      <form action="/pages/submit.html" target="_self">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
             <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
